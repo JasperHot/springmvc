@@ -58,8 +58,8 @@ h1 {text-align: center}
 <div id="bar">
 <input id = 'input' value = '116.397428,39.90923'></input>
 <input id = 'output' value = '显示位置' disabled></input>
-<button onclick='int=window.setInterval("clock()",1000)'>开始</button>
-<button onclick='int=window.clearInterval(int)'>停止</button>
+<button onclick="int=window.setInterval('clock()',1000)">开始</button>
+<button onclick="int=window.clearInterval(int)">停止</button>
 </div>
 <div id="container">
 <div id= "tip"></div>
@@ -69,6 +69,7 @@ h1 {text-align: center}
 <script src="http://webapi.amap.com/maps?v=1.3&key=43fb89e1980d465202ec09a91ef56e51&plugin=AMap.Geocoder"></script>
 <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 <script>
+/*<![CDATA[*/
 var lineArrs = [  
             new AMap.LngLat(Number(116.398428),Number(39.90757)),
             new AMap.LngLat(Number(116.399428),Number(39.90758)),
@@ -187,7 +188,7 @@ map.plugin('AMap.Geocoder',function(){//同步加载
     });
     index=(index+1)<lineArrs.length?index+1:0;
  }
- //定时器
+//定时器
 /* var lineArrs = [  
                 new AMap.LngLat(Number(116.368904),Number(39.913423)),  
                 new AMap.LngLat(Number(116.382122),Number(39.901176)), 
@@ -203,6 +204,7 @@ map.plugin('AMap.Geocoder',function(){//同步加载
 
     index=(index+1)<lineArrs.length?index+1:0;
  } */
+ /*]]>*/
 </script>
 <!-- <script type="text/javascript">
             var msg = "${message}";
